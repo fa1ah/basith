@@ -1,0 +1,40 @@
+{#{% block content %}#}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BloodBank</title>
+
+    <style>
+        h1 {
+            text-align: center;
+            color: darkred;
+            font-size: 60px;
+        }
+    </style>
+</head>
+<body>
+<h1> Blood Bank</h1>
+
+
+<form action="add" method='POST'>
+
+    {% csrf_token %}
+
+    Full Name: <br>
+    <label>
+        <input type="text" name="firstname">
+    </label><br>
+    Blood Type: <br>
+    <label>
+        <input type="text" name="blood">
+    </label><br>
+    Contact Number: <br>
+    <label>
+        <input type="text" name="num">
+    </label><br>
+    <input type="submit" name="Add">
+</form>
+</body>
+</html>
+{#{% endblock %}#}
